@@ -1,0 +1,8 @@
+lab3b:lab3b.o clock.o
+	g++ -o lab3b lab3b.o clock.o
+lab3b.o:lab3b.cpp clock.h
+	g++ -c lab3b.cpp
+clock.o:clock.cpp clock.h
+	g++ -c clock.cpp
+clean:
+	rm lab3b
